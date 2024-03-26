@@ -1,74 +1,40 @@
-*******************************
-* INSTALLAZIONE SOFTWARE WeMi *
-*******************************
+# WeMi
 
-===> 1) Cosa serve <===
+## Requisiti 
 
-> GIT BASH 		(https://git-scm.com/)
-> NodeJS 		(https://nodejs.org/en/)
-> Redis 		(https://redis.io/)
-> postgreSQL 	(https://www.postgresql.org/)
-> pgadmin 		(https://www.pgadmin.org/)
+- NodeJS 		(https://nodejs.org/en/) versione 12.22.12
+- Redis 		(https://redis.io/)
+- postgreSQL 	(https://www.postgresql.org/) 
 
-Installare tutti i pacchetti indicati. 
+## Installazione
+- Eseguire `npm ci` nella cartella `WeMi2BackEnd`
+- Eseguire `npm ci` nella cartella `WeMi2FrontEnd`
+- Installazione del DB
+  - eseguire pgadmin
+  - creare un DB con il nome “WE_ITA”
+  - <aprire queryTool> e cliccare sul bottone <Open File> ed aprire il file …\*cartellainstallazionewemi*\WeMi2BackEnd\*nome file db*
+  - cliccare sul bottone <Execute>
 
+## Modifica del file .env Backend
 
-===> 2) download del software dal GIT <===
-
-2.a) definire una cartella dove si vuole installare WeMi (es WorkspaceWeMi)
-2.b) eseguire la shell GitBash e posizionarsi sotto alla cartella di installazione di WeMi
-
-2.c) installazione da GIT con i seguenti comandi:
-
-2.c.a) git clone git@us-south.git.cloud.ibm.com:francesco.murador/wemi.git (****** da definire *******)
-2.c.b) dalla shell GitBash aprire la cartella WeMi2BackEnd 
-2.c.c) eseguire il comando: npm ci
-2.c.d) dalla shell GitBash aprire la cartella WeMi2FrontEnd 
-2.c.e) eseguire il comando: npm ci
-
-NB. 
-Le porte abilitate sono la 8000 e al 3000. Se si volesse modificare le porte aprire i file .env di backend e frontend.
+- Inserire il valore della variabile <WEMI2_DB_PWD> con la password del db postgres definito in fase di installazione 
 
 
-===> 2) installazione del DB <===
+## Esecuzione Development Server 
 
-3.b) eseguire pgadmin
-3.d) creare un DB con il nome “WE_ITA” 
-3.c) <aprire queryTool> e cliccare sul bottone <Open File> ed aprire il file …\*cartellainstallazionewemi*\WeMi2BackEnd\*nome file db*
-3.d) cliccare sul bottone <Execute>
+- Eseguire l'applicazione <redis-server>
+- Eseguire `npm start` per il dev server di Backend (nella cartella WeMi2BackEnd)
+- Eseguire `npm start` per il dev server di Frontend (nella cartella WeMi2FrontEnd)
 
+Frontend in ascolto sulla porta 3000 e Backend in ascolto su porta 8000
 
-===> 4) Modifica del file .env <===
+## Utenze precaricate sul DB
 
-4.a) posizionarsi sotto alla cartella …\*cartellainstallazionewemi*\WeMi2BackEnd\ 
-
-4.b) aprire con un editor di testo il file .env
-
-4.c) inserire il valore della variabile <WEMI2_DB_PWD> con la password del db postgres definito al punto 3 e salvare
-
-
-===> 5) Esecuzione WeMi <===
-
-5.a) Eseguire l'applicazione <redis-server>
-
-5.b) tramite la shell git bash dalla cartella C:/***********/WeMi2BackEnd eseguire il comando npm start
-5.c) aspettare che venga visualizzato questo messaggio "Apollo Server on http://localhost:8000/graphql" senza errori
-5.d) apriere una nuova shell git bash e posizionarsi sotto alla cartella C:/***********/WeMi2FrontEnd 
-5.e) eseguire il comando npm start
-
-L'istruazione apre sul browser predefinito la Home Page di WeMi <http://localhost:3000/>
-
-
-
-*****************************
-* Utenze precaricate sul DB *
-*****************************
-
-=> Amministratore WeMi: adminWeMi
-=> Amministratore Ente di prova: sistinf@entesistinf.it
-=> Cittadino di prova: Cittadino
-=> Lavoratore di prova: Lavoratore1
-=> Lavoratore di prova in fase di candidatura: Lavoratore2 
+- Amministratore WeMi: adminWeMi
+- Amministratore Ente di prova: sistinf@entesistinf.it
+- Cittadino di prova: Cittadino
+- Lavoratore di prova: Lavoratore1
+- Lavoratore di prova in fase di candidatura: Lavoratore2 
 
 
 Per accedere con una utenza cliccare sull'icona "omino" in alto a destra ed inserire il nome utenza come riportato con lettere maiuscole e minuscole, 
