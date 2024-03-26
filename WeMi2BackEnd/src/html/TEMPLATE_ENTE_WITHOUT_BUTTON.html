@@ -1,0 +1,132 @@
+<!DOCTYPE html
+    PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
+    >
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>Email WeMi 2.0</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <style>
+        body {
+            margin: 0;
+        }
+
+        th.navbar {
+            text-align: left; 
+            background-color: #DD0031; 
+            padding: 1em 1em 0.3em 0em;
+        }
+
+        .container {
+            height: 80px;
+            width: 170px;
+        }
+
+        .logo {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .table-width {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .table-width {
+            width: 100%;
+        }
+
+        td>a.link {
+            display: flex;
+            justify-content: center;
+        }
+
+        a.link {
+            cursor: pointer;
+            outline: none;
+            font-weight: bold;
+            text-align: center;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            color: #005CB9;
+            text-decoration: underline !important;
+        }
+        td.body {
+            font-size: 14px; 
+            color:#55565A;
+            font-family: MontSerrat, Arial, Arial, Helvetica, sans-serif; 
+            padding: 0 0.5em
+        }
+        td.footer {
+            font-size: 11px; 
+            background-color: #ECECEC; 
+            color:#55565A; 
+            font-family: MontSerrat, Arial, Arial, Helvetica, sans-serif; 
+            padding: 0 0.5em
+        }
+    </style>
+</head>
+
+<body>
+    <table role='presentation' border='0' align="center" cellpadding='0' cellspacing='0' class='table-width'>
+        <thead>
+            <tr>
+                <th class='navbar'>
+                    <img src='${logoNavbar}' width='auto' height='70px' alt='logo navbar' />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="body">
+                    <p style="margin: 16px 0 16px 0"> 
+                        ${HEADER} 
+                    </p>
+                    <p style="white-space: pre-line; margin: 0 0 16px 0"> ${BODY} </p>
+                    <div style="white-space: pre-line; margin: 0 0 16px 0"">
+                        ${SIGN}
+                    </div>
+
+                    <table style="padding: 1em 0 1em 0; margin: 0;" role='presentation' border='0' cellpadding='0' cellspacing='0' class='table-width'>
+                        <tbody>
+                            <tr>
+                                <td dir='ltr' valign='top'>
+                                    <div class="container">
+                                        <img src='${logo}' style="max-height: 80px;" class="logo" alt='logo Ente' />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+        </tr>
+        <tfoot>
+            <tr>
+                <td class="footer">
+                    <p style="margin: 16px 0 0 0">
+                        <span>
+                            ${FOOTER}
+                        </span>
+                        <br>
+                        <span>
+                            <a class="link" href='${fileCondizioni}' download
+                                style="font-size: 11px; color:#55565A; font-family: MontSerrat, Arial, Arial, Helvetica, sans-serif; cursor: pointer !important;">
+                                Condizioni di utilizzo / servizio dell'ente</a>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

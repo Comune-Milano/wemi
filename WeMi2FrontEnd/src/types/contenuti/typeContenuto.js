@@ -1,0 +1,22 @@
+export const VOCI_MENU_LIVELLO_1 = 1;
+export const VOCI_MENU_LIVELLO_2 = 2;
+export const CATEGORIE_LIVELLO_1 = 3;
+export const CATEGORIE_LIVELLO_2 = 4;
+export const MANSIONI = 5;
+export const SERVIZI = 6;
+export const SPAZI_SINGOLI_WEMI = 7;
+export const TESTIMONIALS_SCHEDA_SINGOLA = 8;
+export const TESTIMONIALS_SCHEDA_INTRODUTTIVA = 9;
+export const FOOTER_COLONNA_1 = 10;
+export const FOOTER_COLONNA_2 = 11;
+export const HERO_SLIDER = 12;
+export const CATEGORIE_ACCREDITAMENTO = 13;
+export const TARGET_LIVELLO_1 = 15;
+export const TARGET_LIVELLO_2 = 16;
+export const SOSTEGNI_ECONOMICI = 17;
+export const QUALIFICHE = 18;
+export const CAROUSEL = 20;
+export const SECTIONS = 21;
+export const SLIDER_018 = 22;
+export const SLIDER_EDUCAZIONE_FINANZIARIA = 23;
+

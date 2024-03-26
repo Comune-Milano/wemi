@@ -1,0 +1,5 @@
+export const STATIVOUCHER ={
+  ATTIVO: 1,
+  ANNULLATO: 2,
+  IMPORTATO:0
+};

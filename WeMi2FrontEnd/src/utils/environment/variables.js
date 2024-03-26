@@ -1,0 +1,25 @@
+
+import { LOCAL, DEVELOPMENT, PRODUCTION, SERVICE } from "types/constants";
+import { ENV_SCOPE, PROCESS_ENV } from './scope';
+
+/* eslint-disable no-underscore-dangle */
+
+export const __DEV__ = PROCESS_ENV.NODE_ENV === DEVELOPMENT;
+
+export const __PRODUCTION__ = PROCESS_ENV.NODE_ENV === PRODUCTION;
+
+export const __PUBLIC_URL__ = PROCESS_ENV.PUBLIC_URL;
+
+export const __AUTH_DEV__ = ENV_SCOPE.REACT_APP_AUTENTICAZIONE === LOCAL;
+
+export const __AUTH_PROD__ = ENV_SCOPE.REACT_APP_AUTENTICAZIONE === SERVICE;
+
+export const __BASE_URL__ = ENV_SCOPE.REACT_APP_BASE_URL;
+
+export const __LOGOUT_WEBSEAL_URL__ = ENV_SCOPE.REACT_APP_LOGOUT_WEBSEAL_URL;
+
+export const __WEMI2_BACKEND_URL__ = ENV_SCOPE.REACT_APP_WEMI2_BACKEND_URL;
+
+export const __WEBSOCKET_PATH__ = ENV_SCOPE.REACT_APP_WEBSOCKET_PATH;
+
+export const __WEBSOCKET_HOST__ = ENV_SCOPE.REACT_APP_WEBSOCKET_HOST;

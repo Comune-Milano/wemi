@@ -1,0 +1,10 @@
+export const CD_CONTENUTO_SEZIONE = {
+  DOMICILIARITA: 'SEZ_DOM',
+  ZERO_18: 'SEZ_0-18',
+};
+  
+export const CD_CONTENUTO_AREA = {
+  ZERO_18: 'A018',
+  ZERO_18_CROSS: 'A018_CROSS',
+};
+  

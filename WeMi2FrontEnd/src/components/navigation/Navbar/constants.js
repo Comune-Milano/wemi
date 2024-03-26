@@ -1,0 +1,2 @@
+
+export const NAV_HEIGHT_CHANGE_EV = 'NAV_HEIGHT_CHANGE';

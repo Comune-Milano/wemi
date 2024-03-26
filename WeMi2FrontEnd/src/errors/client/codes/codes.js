@@ -1,0 +1,6 @@
+
+// Payment errors.
+export const PAYMENT_PROVIDER_INIT_ERROR_CODE = 1;
+export const PAYMENT_PROVIDER_UNMOUNTED_ERROR_CODE = 2;
+export const PAYMENT_METHOD_NONCE_ERROR_CODE = 3;
+export const TRANSACTION_ERROR_CODE = 4;

@@ -1,0 +1,57 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en" style="height: auto">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta
+    name="description"
+    content="Il portale WeMi mette a disposizione dei cittadini servizi per la cura ed il benessere qualificati dal Comune Di Milano"
+    data-react-helmet="true"
+  />
+  <meta
+    name="keywords"
+    content="milano, welfare, comune milano, lavoratore, curriculum, cittadino, servizi, spazi wemi, scopri i servizi, tcb, come funziona, baby-sitter, tata, colf, badante, ente, acquisto, spazi wemi, sostegno alla famiglia, benessere della persona, gestione delle attività domestiche"
+    data-react-helmet="true"
+  />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <script type="application/javascript" src="%PUBLIC_URL%/env-config.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type = "text/javascript">
+    if (window._wemiEnv_ && window._wemiEnv_.REACT_APP_ATM_API_URL) {
+      document.write('<script type="text/javascript" src="' + window._wemiEnv_.REACT_APP_ATM_API_URL + '"><\/script>');
+    }
+  </script>
+  <meta name="build-version" content="%REACT_APP_VERSION%" />
+  <title>WeMi - La città per il welfare</title>
+  <script type="text/javascript">
+    if (window._wemiEnv_ && window._wemiEnv_.REACT_APP_COOKIE == 'PROD') {
+      document.write('<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="7521b237-a1c2-4be5-9a49-2f29aba6dc7a" ><\/script>');
+      document.write('<script type="text/javascript"> function OptanonWrapper() { }<\/script>');
+    }
+    if (window._wemiEnv_ && window._wemiEnv_.REACT_APP_COOKIE == 'TEST') {
+      document.write('<script type="text/javascript" src="https://cdn.cookielaw.org/consent/7521b237-a1c2-4be5-9a49-2f29aba6dc7a-test/OtAutoBlock.js" ><\/script>');
+      document.write('<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="7521b237-a1c2-4be5-9a49-2f29aba6dc7a-test" ><\/script>');
+      document.write('<script type="text/javascript"> function OptanonWrapper() { }<\/script>');
+    }
+  </script>
+</head>
+
+<body style="height: auto">
+  <noscript> You need to enable JavaScript to run this app. </noscript>
+  <div id="root"></div>
+
+  <script type = "text/javascript">
+    if (window._wemiEnv_ && window._wemiEnv_.REACT_APP_ATM_API_URL) {
+      _satellite.pageBottom();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "typingOptions": {
+    "enableAutoDiscovery": true
+  }
+}

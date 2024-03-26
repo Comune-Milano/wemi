@@ -1,0 +1,16 @@
+export { labelAccudimento } from './Accudimento';
+export { labelAltriValori } from './AltriValori';
+export { labelAnniEsperienza } from './AnniEsperienza';
+export { labelCompetenzeBadante } from './Badante';
+export { labelCalendario } from './Calendario';
+export { labelCarattere } from './Carattere';
+export { labelCheckboxListDatiPersonali } from './CheckboxListDatiPersonali';
+export { labelCheckboxListDisponibilita } from './CheckBoxListDisponibilita';
+export { labelCompetenzeColf } from './Colf';
+export { labelCorsiBadante } from './CorsiBadante';
+export { labelCorsiTata } from './CorsiTata';
+export { labelMadrelingua } from './Madrelingua';
+export { labelSpaziLavoratore } from './SpaziLavoratore';
+export { labelStipendioProposto } from './StipendioProposto';
+export { labelCompetenzeTata, labelFasceEta } from './Tata';
+export { labelTipologiaOrario } from './TipologiaOrario';

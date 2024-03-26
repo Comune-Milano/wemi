@@ -1,0 +1,12 @@
+{
+  "git": {
+    "tagName": "v${version}"
+  },
+  "hooks": {
+    "after:bump": "npm run changelog",
+    "after:release": "npm run slack-release -- ${version} ${latestVersion}"
+  },
+  "npm": {
+    "publish": false
+  }
+}

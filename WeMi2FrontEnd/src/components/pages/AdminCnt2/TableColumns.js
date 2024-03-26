@@ -1,0 +1,1 @@
+export const TableColumns = ['Id', 'Descrizione', 'Progressivo', 'Versione', 'Stato', 'Azioni'];

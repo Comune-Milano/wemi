@@ -1,0 +1,1 @@
+export const DOMINIO_VOUCHER = 'STATO_VOUCHER';

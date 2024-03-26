@@ -1,0 +1,302 @@
+import {
+  INTERNAL_SERVER_ERROR,
+  PAYMENT_PROVIDER_FAILED_TRANSACTION,
+  PAYMENT_PROVIDER_NOT_PURCHASABLE_REQUEST,
+  PAYMENT_PROVIDER_TOKEN_ERROR,
+  INSERT_OPERATORE_VALIDATION_ERROR,
+  INSERT_OPERATORE_ADMIN_VALIDATION_ERROR,
+  INSERT_OPERATORE_WEMI_ADMIN_VALIDATION_ERROR,
+  INSERT_LAVORATORE_VALIDATION_ERROR,
+  DELETE_OPERATORE_ASSOCIATO_VALIDATION_ERROR,
+  DELETE_SECONDARY_OFFICE_VALIDATION_ERROR,
+  UNAUTHENTICATED,
+  UNAUTHORIZED,
+  ACCESS_DENIED,
+  GENERATE_PDF_ERROR,
+  SEND_EMAIL_ERROR,
+  NOT_BLOCKING_SEND_EMAIL_ERROR,
+  WORKER_EVALUATION_REQUEST_BACKOFFICE_TCB,
+  CANDIDATURA_INOLTRATA_ERROR,
+  RICHIESTA_ENTE_PAGATA_ERROR,
+  WRONG_BASE64_FORMAT_ERROR,
+  FAILED_TO_SAVE_BASE64_FILE_ERROR,
+  OVERRIDE_FILE_ERROR,
+  FAILED_TO_DELETE_FILE_ERROR,
+  ASSOCIA_LAVORATORE_ERROR,
+  VALIDATION_ERROR,
+  MULTIPLE_VALIDATION_ERROR,
+  TOKEN_SERVICE_EXPIRED,
+  TOKEN_SERVICE_DATA_NOT_VALID,
+  PAYMENT_PROVIDER_FAILED_DB_TRACKING_SUCCESSFULL_TRANSACTION,
+  PAYMENT_PROVIDER_FAILED_DB_TRACKING_FAILED_TRANSACTION,
+  UTENTE_NON_VALIDO,
+  UTENTE_NON_RICONOSCIUTO,
+  NOT_CANDIDATE_USER,
+  MULTIPLE_FISCAL_CODE,
+  FISCAL_CODE_NOT_FOUND,
+  SPAZI_WEMI_ID_ERROR,
+  CONTENT_CODE_INVALID,
+  ANNULLA_VOUCHER_ERROR,
+  RIPRISTINO_VOUCHER_ERROR,
+  INSERT_TRANSACTION_ERROR,
+  TIMESTAMP_VOUCHER_ERROR,
+} from '../codes/graphql-codes';
+
+// TODO: Each error should have a flag telling if it should be
+// handled by the error manager or streammed up to the ui (local handling).
+
+export const GRAPHQL_ERROR_VISUALIZATION_MAP = new Map([
+  [INTERNAL_SERVER_ERROR, {
+    message: 'Si è verificato un errore inatteso in fase di comunicazione con il server.',
+    title: 'Error interno',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [PAYMENT_PROVIDER_FAILED_TRANSACTION, {
+    message: `
+      Si è verificato un errore in fase di esecuzione della transazione.
+      Controlla che il metodo di pagamento selezionato e i relativi dati siano corretti.
+    `,
+    title: 'Errore pagamento',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [PAYMENT_PROVIDER_NOT_PURCHASABLE_REQUEST, {
+    message: `
+      Non è stato possibile completare l'operazione richiesta in quanto il servizio risulta non più acquistabile.
+      Controlla l'indice delle richieste per maggiori informazioni.
+    `,
+    title: 'Errore pagamento',
+    fatal: true,
+    showSendReport: true,
+  }],
+  [PAYMENT_PROVIDER_TOKEN_ERROR, {
+    message: `
+      Non è stato possibile recuperare il token di pagamento.
+      Assicurati che l'ente sia abilitato a ricevere pagamenti in ingresso. 
+    `,
+    title: 'Errore di inizializzazione',
+    fatal: true,
+    showSendReport: true,
+  }],
+  [INSERT_OPERATORE_VALIDATION_ERROR, {
+    message: "L'utenza {userName} risulta già operatore dell'ente {nomeEnte}.",
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [INSERT_OPERATORE_ADMIN_VALIDATION_ERROR, {
+    message: "L'utenza {userName} risulta già amministratore dell'ente {nomeEnte}.",
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [INSERT_OPERATORE_WEMI_ADMIN_VALIDATION_ERROR, {
+    message: "L'utenza {userName} risulta già amministratore WeMi.",
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [INSERT_LAVORATORE_VALIDATION_ERROR, {
+    message: "L'utenza {userName} risulta già Lavoratore.",
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [DELETE_OPERATORE_ASSOCIATO_VALIDATION_ERROR, {
+    message: 'Attenzione impossibile eliminare la tua utenza tra gli operatori già associati.',
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [VALIDATION_ERROR, {
+    message: 'La sezione {section} non è valida.\n Il campo {field} da memorizzare non è valido. {tip}.',
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [MULTIPLE_VALIDATION_ERROR, {
+    message: 'La sezione {section} non è valida.\n I campi {field} da memorizzare non sono validi. {tip}.',
+    title: 'Errore di validazione',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [UNAUTHORIZED, {
+    message: 'Non autorizzato.',
+    title: 'Errore di autenticazione',
+    fatal: true,
+    showSendReport: true,
+  }],
+  [UNAUTHENTICATED, {
+    message: 'Non autenticato.',
+    title: 'Errore di autenticazione',
+    fatal: true,
+    showSendReport: true,
+  }],
+  [ACCESS_DENIED, {
+    message: 'Accesso negato.',
+    title: 'Errore di autenticazione',
+    fatal: true,
+    showSendReport: true,
+  }],
+  [GENERATE_PDF_ERROR, {
+    message: 'Errore nella generazione del pdf.',
+    title: 'Errore',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [SEND_EMAIL_ERROR, {
+    message: 'Errore inoltro email.',
+    title: 'Errore',
+    fatal: false,
+    showSendReport: true,
+  }],
+  [NOT_BLOCKING_SEND_EMAIL_ERROR, {
+    message: 'I dati sono stati aggiornati ma è stato riscontrato un errore nell\'inoltro della mail.',
+    title: 'Attenzione',
+    fatal: false,
+    buttonText: 'Ok',
+    showSendReport: false,
+  }],
+  [WORKER_EVALUATION_REQUEST_BACKOFFICE_TCB, {
+    message: 'Richiesta di valutazione non inoltrata, ci sono recensioni ancora da confermare.',
+    title: 'Attenzione',
+    fatal: false,
+    buttonText: 'Ok',
+    showSendReport: false,
+  }],
+  [CANDIDATURA_INOLTRATA_ERROR, {
+    message: 'Hai già inoltrato la tua candidatura, non puoi più modificarla.',
+    title: 'Attenzione',
+    fatal: true,
+    buttonText: 'Ok',
+    showSendReport: false,
+  }],
+  [RICHIESTA_ENTE_PAGATA_ERROR, {
+    message: 'Non puoi acquistare questa richiesta.',
+    title: 'Attenzione',
+    fatal: true,
+    buttonText: 'Ok',
+    showSendReport: false,
+  }],
+  [NOT_CANDIDATE_USER, {
+    message: 'Utente non candidato per questo servizio.',
+    title: 'Attenzione',
+    fatal: true,
+    buttonText: 'Ok',
+    showSendReport: false,
+  }],
+  [SEND_EMAIL_ERROR, {
+    message: "Errore nell'inoltro della email",
+    title: 'Errore',
+    fatal: false,
+  }],
+  [WRONG_BASE64_FORMAT_ERROR, {
+    title: 'Errore',
+    message: 'Si è verificato un errore in fase di processamento del file. Formato non corretto.',
+    fatal: false,
+  }],
+  [FAILED_TO_SAVE_BASE64_FILE_ERROR, {
+    title: 'Errore',
+    message: 'Si è verificato un errore in fase di salvataggio del file.',
+    fatal: false,
+  }],
+  [OVERRIDE_FILE_ERROR, {
+    title: 'Errore',
+    message: "Non è stato possibile salvare il file, prova a cambiare il nome e ripetere l'operazione.",
+    fatal: false,
+  }],
+  [FAILED_TO_DELETE_FILE_ERROR, {
+    title: 'Errore',
+    message: 'Si è verificato un errore in fase di eliminazione del file.',
+    fatal: false,
+  }],
+  [ASSOCIA_LAVORATORE_ERROR, {
+    title: 'Errore',
+    message: 'Si è verificato un errore in fase di associazione del lavoratore.',
+    fatal: false,
+  }],
+  [DELETE_SECONDARY_OFFICE_VALIDATION_ERROR, {
+    title: 'Errore di validazione',
+    message: 'Non puoi cancellare una sede associata ad un servizio.',
+    fatal: false,
+  }],
+  [TOKEN_SERVICE_DATA_NOT_VALID, {
+    title: 'Errore',
+    message: 'Alcuni degli enti selezionati non sono più disponibili, pertanto si richiede gentilmente di ripetere la procedura di selezione.',
+    fatal: false,
+    preventDefaultManagement: true,
+  }],
+  [TOKEN_SERVICE_EXPIRED, {
+    title: 'Errore',
+    message: 'La sessione relativa alla tua richiesta di servizio è scaduta. Ti preghiamo di ripetere la procedura.',
+    fatal: false,
+    preventDefaultManagement: true,
+  }],
+  [PAYMENT_PROVIDER_FAILED_DB_TRACKING_SUCCESSFULL_TRANSACTION, {
+    title: 'Errore',
+    message: 'Il pagamento è andato a buon fine, ma non è stato possibile salvare i dati relativi alla transazione.',
+    fatal: false,
+  }],
+  [PAYMENT_PROVIDER_FAILED_DB_TRACKING_FAILED_TRANSACTION, {
+    title: 'Errore',
+    message: 'La transazione è fallita e non è stato possibile salvare i dati relativi alla transazione.',
+    fatal: false,
+  }],
+  [UTENTE_NON_VALIDO, {
+    title: 'Errore',
+    message: 'Il profilo dell\'utente non è valido.',
+    fatal: false,
+    preventDefaultManagement: true,
+  }],
+  [UTENTE_NON_RICONOSCIUTO, {
+    title: 'Errore',
+    message: 'Username e/o password errati.',
+    fatal: false,
+    preventDefaultManagement: true,
+  }],
+  [MULTIPLE_FISCAL_CODE, {
+    title: 'Errore',
+    message: "Non è possibile effettuare la registrazione perchè al codice fiscale inserito corrisponde più di un'utenza.",
+    fatal: false,
+  }],
+  [FISCAL_CODE_NOT_FOUND, {
+    title: 'Errore',
+    message: "Ci risulta che {user} non sia censito in WeMi. Per poter procedere con l'inserimento della candidatura è necessario fornire un codice utente o codice fiscale presente su WeMi o censito sul comune di Milano.",
+    fatal: false,
+    preventDefaultManagement: true,
+  }],
+  [SPAZI_WEMI_ID_ERROR, {
+    title: 'Errore',
+    message: 'hdhdh',
+    fatal: false,
+    preventDefaultManagement: true,
+  }],
+  [CONTENT_CODE_INVALID, {
+    title: 'Errore',
+    message: 'Il codice del contenuto inserito è già utilizzato',
+    fatal: false,
+  }],
+  [ANNULLA_VOUCHER_ERROR, {
+    title: 'Attenzione!',
+    message: 'Si sono verificati degli errori durante l\'operazione sul voucher. Contattare gli amministratori del Sistema.',
+    fatal: false,
+  }],
+  [RIPRISTINO_VOUCHER_ERROR, {
+    title: 'Attenzione!',
+    message: 'Si sono verificati degli errori durante l\'operazione sul voucher. Contattare gli amministratori del Sistema.',
+    fatal: false,
+  }],
+  [INSERT_TRANSACTION_ERROR, {
+    title: 'Attenzione!',
+    message: 'Si sono verificati degli errori durante l\'inserimento della transazione voucher. Contattare gli amministratori del Sistema.',
+    fatal: false,
+  }],
+  [TIMESTAMP_VOUCHER_ERROR, {
+    message: 'Risulta in corso un altro pagamento che utilizza lo stesso voucher, la transazione è annullata, la pagina sarà aggiornata',
+    title: 'Attenzione',
+    fatal: true,
+    buttonText: 'Ok',
+    showSendReport: false,
+  }],
+]);

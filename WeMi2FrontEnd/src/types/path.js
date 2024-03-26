@@ -1,0 +1,30 @@
+/** @format */
+
+export const PAGE_HOME_PATH = '';
+export const PAGE_HOMEPREVIEW_URL = `/admin/:tyCnt/preview`;
+export const PAGE_LOGIN_PATH = '/login';
+export const PAGE_CATEGORY_URL = '/c/:idCategory';
+export const PAGE_SERVICESEARCH_URL = '/c/:idCategory/r/:idServiceSearch';
+export const PAGE_REQUESTSERVICE_URL = '/c/:idCategory/r/:idServiceSearch/forward';
+export const PAGE_ENTE_URL = '/e/:idEnte';
+export const PAGE_FORWARD_URL = '/r/invia';
+export const PAGE_REQUESTSINDEX_URL = '/r/idRequestsIndex';
+export const PAGE_CART_URL = '/cart';
+export const PAGE_ORDER_URL = '/order';
+export const PAGE_ORDERBILLING_URL = '/billing';
+export const PAGE_ORDERSUMMARY_URL = '/orderSummary';
+export const PAGE_CHAT_URL = '/chat/:idRichiestaEnte';
+export const PAGE_NOT_FOUND_PATH = '/404';
+export const PAGE_ENTSSE_URL = '/EntSSE';
+export const PAGE_ENTSERVICE_URL = '/ENTSSR001';
+export const PAGE_ENTERI001_URL = '/e/:idEnte/handleRequests';
+export const PAGE_MODALEACCETTAZIONEENTERI001_URL =  '/e/:idEnte/handleRequests/:idRichiesta/AccettaRichiesta';
+export const PAGE_MODALERIFIUTOENTERI001_URL =  '/e/:idEnte/handleRequests/:idRichiesta/ChiudiRichiesta';
+export const PAGE_TCBIRI001_URL = `/RichiestaServizioTCB/:tcb`;
+export const PAGE_TCBIRI002_URL = `/ConfigurazioneRichiestaTCB/:tcb`;
+export const PAGE_TCBIRI002MODIFICA_URL = `/ConfigurazioneRichiestaTCB/:tcb/:idRichiesta`;
+export const PAGE_TCBIRISUMMARY_URL = `/ConfigurazioneRichiestaTCB/:tcb/Riepilogo`;
+export const PAGE_ENTERI002_URL = '/admin/:idOperatore/handleRequests';
+export const PAGE_TCB_ADMIN_ERI_001 = '/admin/:idOperatore/richiesteTcb';
+export const PAGE_TCB_ADMIN_ERI_002 = '/admin/associaDomandaOfferta/:idRichiesta';
+export const PAGE_CHATADMIN_URL = '/admin/chat/:idRichiestaEnte';

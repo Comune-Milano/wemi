@@ -1,0 +1,11 @@
+export { InstitutionSection } from './institution';
+export { OperatorsSection } from './operators';
+export { DescriptionSection } from './description';
+export { AttachmentsSection } from './attachments';
+export { PrimaryOfficeSection } from './primaryoffice';
+export { SecondaryOfficesSection } from './secondaryoffices';
+export { ContactPersonSection } from './contactperson';
+export { CitizenAvailabilitySection } from './citizenavailability';
+export { OthersInfoSection } from './othersinfo';
+export { MerchantSection } from './merchant';
+export { PaymentSection } from './payment';

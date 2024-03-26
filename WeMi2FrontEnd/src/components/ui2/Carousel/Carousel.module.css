@@ -1,0 +1,124 @@
+
+/* Slideshow container */
+.slideshowContainer {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidesWrapper {
+  flex: 1;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+div.arrowContainer {
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  width: 0px;
+}
+
+div.arrowContainerLeft {
+  left: 0;
+}
+
+div.arrowContainerRight {
+  right: 0;
+}
+
+i.arrow {
+  border: solid #D9D9D9;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  margin-right: 12px;
+  margin-left: 12px;
+  top: calc(50% - 2rem);
+  width: auto;
+  transition: 0.6s ease;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+@media screen and (min-width: 768px) {
+  i.arrow {
+    padding: 7px;
+    margin-right: 44px;
+    margin-left: 44px;
+  }
+  div.arrowContainer {
+    width: 55px;
+  }
+}
+
+i.arrow.arrowRight {
+  right: 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+i.arrow.arrowLeft {
+  left: 0;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.slideshowContainer:hover i.arrow.arrowLeft,
+.slideshowContainer:hover i.arrow.arrowRight,
+i.arrow.arrowLeft:focus,
+i.arrow.arrowRight:focus {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (hover: none) {
+  i.arrow.arrowRight,
+  i.arrow.arrowLeft {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dotsFixedTexts {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+  padding: 4rem 0 0 0;
+}
+
+.dot {
+  height: 0.8rem;
+  width: 0.8rem;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .dot {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0.35rem;
+  }
+}

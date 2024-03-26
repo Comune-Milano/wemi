@@ -1,0 +1,12 @@
+
+export const tyContenuto = {
+  SPAZI_WEMI: 7,
+  AREA: 3,
+  SEZIONI: 21, 
+  CATEGORIE: 4,
+  TARGET_LIVELLO_1: 15,
+  MANSIONI: 5,
+  SERVIZI: 6,
+  SLIDER: 22,
+  SLIDER_EDUCAZIONE_FINANZIARIA: 23,
+};

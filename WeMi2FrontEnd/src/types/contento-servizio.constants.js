@@ -1,0 +1,2 @@
+
+export const ID_SERVIZIO_CORSI_ITALIANO = '2019';

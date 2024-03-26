@@ -1,0 +1,128 @@
+
+[data-braintree-id="toggle"] {
+  font-weight: 500;
+  background-color: transparent;
+  padding-top: 10px;
+  color: rgb(85, 86, 90);
+}
+
+[data-braintree-id="toggle"], [data-braintree-id="toggle"]:hover {
+  background-color: transparent;
+}
+
+[data-braintree-id="card"] {
+  border-radius: 0;
+}
+
+[data-braintree-id="payment-options-container"],
+[data-braintree-id="payment-options-container"] > *:first-child,
+[data-braintree-id="payment-options-container"] > *:last-child {
+  border-radius: 0;
+  background-color: #fff;
+}
+
+[data-braintree-id="payment-options-container"] * {
+  color: rgb(85, 86, 90) !important;
+  font-weight: 500;
+  outline: none !important;
+}
+
+[data-braintree-id="payment-options-container"] *:hover {
+  border-color: rgb(0, 153, 168);
+  background-color: rgba(0, 153, 168, 0.15);
+}
+
+[data-braintree-id="payment-options-container"] .braintree-option__label {
+  background-color: transparent;
+}
+
+[data-braintree-id="payment-options-container"].braintree-options-list {
+  padding: 0;
+}
+
+[data-braintree-id="payment-options-container"] > *:first-child {
+  border-bottom-width: 1px;
+  border-top-width: 1.5px;
+  border-left-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+[data-braintree-id="payment-options-container"] > *:first-child:hover {
+  border-bottom-width: 1px;
+}
+
+[data-braintree-id="payment-options-container"] > *:first-child:hover ~ * {
+  border-top-width: 0;
+}
+
+[data-braintree-id="payment-options-container"] > *:last-child {
+  border-top-width: 1px;
+  border-left-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+[data-braintree-id="methods-container"] > * {
+  border-radius: 0 !important;
+}
+
+[data-braintree-id="methods-container"].braintree-methods--active .braintree-method--active, 
+[data-braintree-id="methods-container"].braintree-methods--active .braintree-method--active:focus {
+  border-color: rgb(0, 153, 168);
+  background-color: rgba(0, 153, 168, 0.15);
+  border-color: rgb(0, 153, 168) !important;
+  outline: none !important;
+}
+
+[data-braintree-id="methods-container"] .braintree-method .braintree-method__label {
+  color: rgb(85, 86, 90);
+}
+
+[data-braintree-id="card-sheet-header"] .braintree-sheet__text {
+  font-weight: 500;
+  color: rgb(85, 86, 90);
+}
+
+[data-braintree-id="number-field-group"] {
+  margin-bottom: 18px !important;
+}
+
+[data-braintree-id="card"] .braintree-sheet__content--form {
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+
+[data-braintree-id="number-field-group"] .braintree-form-number,
+[data-braintree-id="expiration-date-field-group"] .braintree-form-expiration,
+[data-braintree-id="cvv-field-group"] .braintree-form-cvv {
+  border-color: #8A8A8D !important;
+}
+
+[data-braintree-id="number-field-group"].braintree-form__field-group--has-error .braintree-form-number,
+[data-braintree-id="expiration-date-field-group"].braintree-form__field-group--has-error .braintree-form-expiration,
+[data-braintree-id="cvv-field-group"].braintree-form__field-group--has-error .braintree-form-cvv {
+  border-color: #DD0031 !important;
+}
+
+[data-braintree-id="number-field-error"],
+[data-braintree-id="expiration-date-field-error"],
+[data-braintree-id="cvv-field-error"] {
+  color: #DD0031 !important;
+}
+
+[data-braintree-id="paypal"] {
+  border-radius: 0;
+}
+
+[data-braintree-id="paypal-sheet-header"] .braintree-sheet__label {
+  font-weight: 500;
+  color: rgb(85, 86, 90);
+}
+
+[data-braintree-id="choose-a-way-to-pay"],
+[data-braintree-id="wrapper"] .braintree-placeholder {
+  display: none;
+}
+
+[data-braintree-id="sheet-container"]  {
+  margin: 0;
+}

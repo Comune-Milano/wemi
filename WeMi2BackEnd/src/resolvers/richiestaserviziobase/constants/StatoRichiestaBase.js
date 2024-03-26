@@ -1,0 +1,7 @@
+
+export const RICHIESTA_BASE_APERTA = '1';
+export const RICHIESTA_BASE_PAGATA = '2';
+export const RICHIESTA_BASE_CHIUSA = '3';
+export const RICHIESTA_BASE_SCADUTA = '4';
+export const RICHIESTA_BASE_RICHIESTA_ANNULLAMENTO = '7';
+export const RICHIESTA_BASE_STORICO_ESP_LAV = '9';

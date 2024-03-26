@@ -1,0 +1,1 @@
+export const DEFAULT_MAX_SIZE = 2097152;

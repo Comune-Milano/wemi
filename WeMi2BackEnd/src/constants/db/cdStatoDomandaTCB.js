@@ -1,0 +1,1 @@
+export const cdStatoDomandaTCB = '10';

@@ -1,0 +1,9 @@
+export const SEZIONI = {
+  ANNI_0_18: 'SEZ_0-18',
+  DOMICILIARITA: 'SEZ_DOM',
+};
+
+export const SEZIONI_ARR = [
+  SEZIONI.ANNI_0_18,
+  SEZIONI.DOMICILIARITA,
+];

@@ -1,0 +1,12 @@
+
+export const codiceMunicipio = {
+  MUNICIPIO_1: 1,
+  MUNICIPIO_2: 2,
+  MUNICIPIO_3: 3,
+  MUNICIPIO_4: 4,
+  MUNICIPIO_5: 5,
+  MUNICIPIO_6: 6,
+  MUNICIPIO_7: 7,
+  MUNICIPIO_8: 8,
+  MUNICIPIO_9: 9,
+};

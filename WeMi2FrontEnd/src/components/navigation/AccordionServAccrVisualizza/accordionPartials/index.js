@@ -1,0 +1,12 @@
+export { default as Destinatari } from './Destinatari';
+export { default as Ente } from './Ente';
+export { default as InformazioniServizio } from './InformazioniServizio';
+export { default as PersonaleEsterno } from './PersonaleEsterno';
+export { default as PersonaleInterno } from './PersonaleInterno';
+export { default as Prezzo } from './Prezzo';
+export { default as PrimoContatto } from './PrimoContatto';
+export { default as PrimoContattoDaCompilare } from './PrimoContattoDaCompilare';
+export { default as SedeErogazione } from './SedeErogazione';
+export { default as Servizio } from './Servizio';
+export { default as SostegniEconomici } from './SostegniEconomici';
+export { default as Buttons } from './Buttons';

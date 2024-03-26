@@ -1,0 +1,110 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - collaboration
+  - e-commerce
+  - mobile-payment
+description:
+  it:
+    features:
+      - Funzionalità per il cittadino per la richiesta e l'acquisto di servizi
+      - |-
+        Funzionalità per l'ente per la personalizzazione dell'offerta e la
+
+
+
+
+        gestione delle richieste
+      - Funizionalità per il lavoratore per la gestione della candidatura
+      - |-
+        Funzionalità per la gestione dei contenuti e per la personalizzazione
+
+
+
+
+        del porale
+      - Editor per la realizzazione di pagine informative
+      - |-
+        Gestione dei pagamenti con payment provider, voucher e altra modalità
+
+
+
+
+        concordata
+    genericName: 'WeMi, il portale welfare di Milano'
+    longDescription: |
+      WeMi è la prima piattaforma pubblica che **aggrega l'offerta di servizi di
+
+
+
+      welfare** erogati dal Comune di Milano e da una rete qualificata di
+
+
+
+      associazioni, cooperative e imprese sociali del territorio. **WeMi** è il
+
+
+
+      portale per il welfare del Comune di Milano. Attraverso questa piattaforma
+
+
+
+      i cittadini possono acquistare servizi domiciliari messi a disposizione da
+
+
+
+      Enti accreditati e certificati dal Comune di Milano piuttosto che accedere
+
+
+
+      a servizi gestiti direttamente dal Comune, candidarsi come lavoratori
+
+
+
+      sulla piattaforma compilando un dettagliato questionario on-line,
+
+
+
+      piuttosto che trovare informazioni sui servizi di welfare messi loro a
+
+
+
+      disposizione dal Comune di Milano.
+    shortDescription: Il portale del welfare del comune di Milano
+developmentStatus: stable
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: true
+legal:
+  license: EUPL-1.2
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: true
+maintenance:
+  contacts:
+    - name: '--'
+  contractors:
+    - name: '--'
+      until: '2023-02-02'
+  type: contract
+name: WeMi
+platforms:
+  - web
+  - windows
+  - linux
+releaseDate: '2023-01-26'
+softwareType: standalone/web
+url: 'https://github.com/italia/covid19-opendata-vaccini'

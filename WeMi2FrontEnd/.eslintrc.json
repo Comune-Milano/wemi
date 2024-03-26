@@ -1,0 +1,140 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:jest/recommended",
+    "jest-enzyme",
+    "plugin:redux-saga/recommended"
+  ],
+  "plugins": [
+    "babel",
+    "import",
+    "jsx-a11y",
+    "react",
+    "redux-saga"
+  ],
+  "rules": {
+    "react/prop-types": "warn",
+    "react/forbid-prop-types": "warn",
+    "react/sort-prop-types": "warn",
+    "eqeqeq": "warn",
+    "arrow-parens": "off",
+    "arrow-body-style": [
+      2,
+      "as-needed"
+    ],
+    "camelcase": "warn",
+    "class-methods-use-this": 0,
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "import/imports-first": 0,
+    "function-paren-newline": "warn",
+    "import/newline-after-import": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": 2,
+    "indent-legacy": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "implicit-arrow-linebreak": "off",
+    "import/no-webpack-loader-syntax": 0,
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ]
+      }
+    ],
+    "linebreak-style": "off",
+    "max-len": [
+      "error",
+      1000,
+      2,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "newline-per-chained-call": 0,
+    "no-alert": "error",
+    "no-confusing-arrow": 0,
+    "no-console": 2,
+    "no-mixed-operators": "warn",
+    "no-param-reassign": "warn",
+    "no-shadow": "warn",
+    "no-unused-expressions": "error",
+    "no-unused-vars": "error",
+    "no-use-before-define": 0,
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "prefer-destructuring": "warn",
+    "prefer-template": 2,
+    "react/display-name": [
+      2,
+      {
+        "ignoreTranspilerName": true
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js"
+        ]
+      }
+    ],
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline"
+    ],
+    "space-before-function-paren": 0,
+    "react/forbid-foreign-prop-types": 2,
+    "react/jsx-no-target-blank": 0,
+    "react/require-default-props": 0,
+    "react/require-extension": 0,
+    "react/self-closing-comp": 0,
+    "redux-saga/no-yield-in-race": 2,
+    "redux-saga/yield-effects": 2,
+    "require-yield": 0,
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "required": {
+          "every": [
+            "id"
+          ]
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"],
+        "extensions": [
+          ".js",
+          ".ts",
+          ".d.ts"
+        ]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  }
+}

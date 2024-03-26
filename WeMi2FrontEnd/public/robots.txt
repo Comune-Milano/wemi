@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /AreaPersonale
+Disallow: /gestioneEnti
+Disallow: /gestioneEnte
+Disallow: /GestioneEnte
+Disallow: /admin
+Disallow: /r
+Disallow: /ConfigurazioneRichiestaTcb
+Disallow: /configurazionerichiestatcb
+Disallow: /e
+Disallow: /AutenticazioneAmministratore
+Disallow: /feedbackLavoratore
+Disallow: /disponibilitaLavoratore
+Disallow: /candidaturaLavoratoreTCB

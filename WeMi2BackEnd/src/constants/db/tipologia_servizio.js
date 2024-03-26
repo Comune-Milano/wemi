@@ -1,0 +1,4 @@
+export const TIPOLOGIA_SERVIZI = {
+  INDIVIDUALE: '1',
+  CONDIVISO: '2'
+};

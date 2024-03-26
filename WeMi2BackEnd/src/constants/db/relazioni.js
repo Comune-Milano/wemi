@@ -1,0 +1,5 @@
+
+export const RELATION_NAME = {
+  SEZIONE: 'SEZ',
+  CATEGORIA_SERVIZIO: 'CL2',
+};

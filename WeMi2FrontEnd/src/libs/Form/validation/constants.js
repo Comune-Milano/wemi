@@ -1,0 +1,2 @@
+
+export const REQUIRED_ERROR = 'REQUIRED_ERROR';

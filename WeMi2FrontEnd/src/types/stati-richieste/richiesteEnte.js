@@ -1,0 +1,8 @@
+export const RICHIESTA_ENTE_INOLTRATA = '1';
+export const RICHIESTA_ENTE_ACCETTATA = '2';
+export const RICHIESTA_ENTE_CONVERSAZIONE = '3';
+export const RICHIESTA_ENTE_ANNULLATA = '4';
+export const RICHIESTA_ENTE_CHIUSA = '5';
+export const RICHIESTA_ENTE_SCADUTA = '6';
+export const RICHIESTA_ENTE_CONFERMATA = '7';
+export const RICHIESTA_ENTE_PAGATA = '8';

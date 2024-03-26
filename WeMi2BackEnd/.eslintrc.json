@@ -1,0 +1,121 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "import",
+    "jsdoc"
+  ],
+  "extends": ["plugin:jsdoc/recommended"],
+  "rules": {
+    "eqeqeq": "warn",
+    "arrow-parens": "off",
+    "arrow-body-style": [
+      2,
+      "as-needed"
+    ],
+    "camelcase": "warn",
+    "class-methods-use-this": 0,
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "import/imports-first": 0,
+    "import/order": "error",
+    "no-duplicate-imports":"error",
+    "function-paren-newline": "warn",
+    "import/newline-after-import": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": [2, { "caseSensitive": true }],
+    "indent-legacy": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "implicit-arrow-linebreak": "off",
+    "import/no-webpack-loader-syntax": 0,
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "linebreak-style": "off",
+    "max-len": [
+      "error",
+      1000,
+      2,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "newline-per-chained-call": 0,
+    "no-alert": "error",
+    "no-confusing-arrow": 0,
+    "no-console": 2,
+    "no-mixed-operators": "warn",
+    "no-param-reassign": "warn",
+    "no-shadow": "warn",
+    "no-undef":"error",
+    "no-unused-expressions": "error",
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+    "no-use-before-define": 0,
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "prefer-destructuring": "warn",
+    "prefer-template": 2,
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": 0,
+    "jsdoc/check-alignment": 1, // Recommended
+    "jsdoc/check-indentation": 1,
+    "jsdoc/check-param-names": 1, // Recommended
+    "jsdoc/check-tag-names": 1, // Recommended
+    "jsdoc/check-types": 1, // Recommended
+    "jsdoc/implements-on-classes": 1, // Recommended
+    "jsdoc/newline-after-description": 0, // Recommended
+    "jsdoc/no-undefined-types": 1, // Recommended
+    "jsdoc/require-description": 2,
+    "jsdoc/require-jsdoc": 2, // Recommended
+    "jsdoc/require-param": 2, // Recommended
+    "jsdoc/require-param-description": 2, // Recommended
+    "jsdoc/require-param-name": 1, // Recommended
+    "jsdoc/require-param-type": 1, // Recommended
+    "jsdoc/require-returns": 1, // Recommended
+    "jsdoc/require-returns-check": 1, // Recommended
+    "jsdoc/require-returns-description": 1, // Recommended
+    "jsdoc/require-returns-type": 1, // Recommended
+    "jsdoc/valid-types": 1, // Recommended
+    "require-jsdoc": [2, {
+      "require": {
+          "ArrowFunctionExpression": true,
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true
+      }
+  }]
+  },
+  "settings": {
+    "import/extensions": [
+      ".js",
+      ".ts",
+      ".d.ts"
+    ],
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  }
+}

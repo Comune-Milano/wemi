@@ -1,0 +1,13 @@
+export { default as Destinatari } from './Destinatari/index';
+export { default as Ente } from './Ente/index';
+export { default as InformazioniServizio } from './InformazioniServizio/index';
+export { default as PersonaleEsterno } from './PersonaleEsterno/index';
+export { default as PersonaleInterno } from './PersonaleInterno/index';
+export { default as Prezzo } from './Prezzo/index';
+export { default as PrimoContatto } from './PrimoContatto/index';
+export { default as SedeErogazione } from './SedeErogazione/index';
+export { default as Servizio } from './Servizio/index';
+export { default as SostegniEconomici } from './SostegniEconomici/index';
+export { default as ButtonSalva } from './ButtonSalva';
+export { default as DescrittoriDelBenessere } from './DescrittoriDelBenessere';
+export { default as SliderImmagini } from './SliderImmagini';

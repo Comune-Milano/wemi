@@ -1,0 +1,7 @@
+.env
+.env.locale
+/public/env-config.js
+env-config.js
+WeMi2BackEnd/wemi2-error.log
+WeMi2BackEnd/wemi2-info.log
+WeMi2BackEnd/test/integration/__snapshots__/

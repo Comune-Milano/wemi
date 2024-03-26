@@ -1,0 +1,5 @@
+
+export const TIPOLOGIA_CONTRATTO = {
+  INDETRMINATO: 1,
+  DETERMINATO: 2,
+};

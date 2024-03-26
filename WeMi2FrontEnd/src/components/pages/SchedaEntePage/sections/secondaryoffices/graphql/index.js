@@ -1,0 +1,1 @@
+export { checkDeleteSecondaryOffice } from './checkdeletesecondaryoffice';

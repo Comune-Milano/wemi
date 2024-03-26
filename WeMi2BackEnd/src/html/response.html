@@ -1,0 +1,7 @@
+<form id="saml-form" method="post" action="$ENDPOINT" autocomplete="off">
+  <input type="hidden" name="SAMLResponse" id="SAMLResponse" value="$CONTEXT" />
+  <input type="hidden" name="RelayState" id="RelayState" value="$RELAYSTATE" />
+</form>
+<script type="text/javascript">
+  document.forms[0].submit();
+</script>

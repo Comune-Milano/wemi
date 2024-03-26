@@ -1,0 +1,33 @@
+
+.editorWrapper {
+  border: 1px solid #ECECEC;
+}
+
+.editorToolbar {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #ECECEC;
+  margin-bottom: 0;
+}
+
+.textEditor {
+  margin: 0 10px;
+}
+
+.editorImagePopup > * {
+  position: relative;
+}
+
+.textEditor img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.editorReadOnly.editorWrapper {
+  border: none;
+}
+
+.editorReadOnly .textEditor {
+  margin: 0;
+}
