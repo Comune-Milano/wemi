@@ -87,6 +87,8 @@ it:
     cie: false
     pagopa: false
     spid: true
+  riuso:
+    codiceIPA: c_f205
 legal:
   license: EUPL-1.2
 localisation:
